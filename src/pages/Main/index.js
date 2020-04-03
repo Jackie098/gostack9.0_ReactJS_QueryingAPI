@@ -1,7 +1,7 @@
 /* eslint-disable react/state-in-constructor */
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import { FaGithubAlt, FaPlus } from 'react-icons/fa';
+import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa';
 import { Container, Form, SubmitButton } from './styles';
 
 import api from '../../services/api';
@@ -56,7 +56,11 @@ export default class Main extends Component {
           />
 
           <SubmitButton loading={loading}>
-            <FaPlus color="#FFF" size={14} />
+            {loading ? (
+              <FaSpinner color="#FFF" size={14} />
+            ) : (
+              <FaPlus color="#FFF" size={14} />
+            )}
           </SubmitButton>
         </Form>
       </Container>
