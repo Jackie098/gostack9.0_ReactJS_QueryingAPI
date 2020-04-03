@@ -12,5 +12,5 @@ export default function Routes() {
         <Route path="/repository" component={Repository} />
       </Switch>
     </BrowserRouter>
-  )
+  );
 }

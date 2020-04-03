@@ -1,7 +1,14 @@
 import React from 'react';
 
+import { Title } from './styles';
+
 function Main() {
-  return <h1>Main</h1>
+  // 'error' é propriedade de 'Title' e seu valor é 'true'
+  return (
+    <Title error>
+      Main<small>menor</small>
+    </Title>
+  );
 }
 
 export default Main;
