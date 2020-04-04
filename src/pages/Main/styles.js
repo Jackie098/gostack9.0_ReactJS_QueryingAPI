@@ -68,6 +68,10 @@ export const SubmitButton = styled.button.attrs((props) => ({
     opacity: 0.6;
   }
 
+  &:hover {
+    opacity: 0.8;
+  }
+
   ${(props) =>
     props.loading &&
     css`
@@ -75,4 +79,35 @@ export const SubmitButton = styled.button.attrs((props) => ({
         animation: ${rotate} 2s linear infinite;
       }
     `}
+`;
+
+export const List = styled.ul`
+  list-style: none;
+  margin-top: 30px;
+
+  li {
+    padding: 15px 8px;
+    /* margin-bottom: 5px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #ececec; */
+    /* border: 1px solid #eee;
+    border-radius: 4px; */
+    /*
+    span {
+      color: #2d2d2d;
+      font-weight: 750;
+    } */
+
+    & + li {
+      border-top: 1px solid #eee;
+    }
+
+    a {
+      color: #7159c1;
+      text-decoration: none;
+    }
+  }
 `;
